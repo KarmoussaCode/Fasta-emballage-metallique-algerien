@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FASTA - Leading Metal Packaging Solutions in Algeria. Providing innovative and sustainable metal packaging for various industries.">
+    <title>FASTA - Metal Packaging Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="FASTA Logo" width="100">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Products</a>
+                <a href="#industries">Industries</a>
+                <a href="#sustainability">Sustainability</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="language-selector">
+                <button onclick="changeLanguage('en')" class="active">EN</button>
+                <button onclick="changeLanguage('fr')">FR</button>
+                <button onclick="changeLanguage('ar')">عربي</button>
+            </div>
+            <button class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Innovation in Metal Packaging</h1>
+            <p>Leading the way in sustainable metal packaging solutions across Algeria</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About FASTA</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Since our establishment, FASTA has been at the forefront of metal packaging innovation in Algeria. We combine traditional craftsmanship with modern technology to deliver exceptional packaging solutions.</p>
+                    <h3>Our Mission</h3>
+                    <p>To provide sustainable, high-quality metal packaging solutions that meet our clients' needs while maintaining the highest standards of environmental responsibility.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/team.png" alt="FASTA facility" width="500"> >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/oustowana_boxes.png" alt="Industrial Containers">
+                    <h3>Metal Boxes (250 g to 20 kg)</h3>
+                    <p>Sturdy boxes for various capacities, ideal for storage and transport</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Food Packaging">
+                    <h3>Decorative Boxes</h3>
+                    <p>Elegant metal packaging for a unique and aesthetic presentation</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Specialty Containers">
+                    <h3>Metal Piggy Banks</h3>
+                    <p>Durable and customizable coin banks for practical or decorative use</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries" class="industries">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <i class="icon-food"></i>
+                    <h3>Food & Beverage</h3>
+                </div>
+                <div class="industry-card">
+                    <i class="icon-chemical"></i>
+                    <h3>Chemical</h3>
+                </div>
+                <div class="industry-card">
+                    <i class="icon-cosmetics"></i>
+                    <h3>Cosmetics</h3>
+                </div>
+                <div class="industry-card">
+                    <i class="icon-industrial"></i>
+                    <h3>Industrial</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2>Our Commitment to Sustainability</h2>
+            <div class="sustainability-content">
+                <div class="sustainability-card">
+                    <h3>Recyclable Materials</h3>
+                    <p>100% recyclable metal packaging solutions</p>
+                </div>
+                <div class="sustainability-card">
+                    <h3>Energy Efficient</h3>
+                    <p>Modern production processes to reduce energy consumption</p>
+                </div>
+                <div class="sustainability-card">
+                    <h3>Waste Reduction</h3>
+                    <p>Optimized manufacturing to minimize waste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Phone:</strong> +213 XX XX XX XX</p>
+                    <p><strong>Email:</strong> contact@fasta.dz</p>
+                    <p><strong>Address:</strong> Industrial Zone, Algeria</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/FASTA" target="_blank">Facebook</a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" id="name-input" placeholder="Name" required>
+                    <input type="email" id="email-input" placeholder="Email" required>
+                    <input type="tel" id="phone-input" placeholder="Phone">
+                    <textarea id="message-input" placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">FASTA</div>
+                <p>&copy; 2024 FASTA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
