@@ -31,12 +31,12 @@ const translations = {
         mission_title: "Our Mission",
         mission_text: "To provide sustainable, high-quality metal packaging solutions that meet our clients' needs while maintaining the highest standards of environmental responsibility.",
         products_title: "Our Products",
-        industrial_containers: "Industrial Containers",
-        industrial_desc: "Heavy-duty containers for industrial applications",
-        food_packaging: "Food Packaging",
-        food_desc: "Food-grade metal packaging solutions",
-        specialty_containers: "Specialty Containers",
-        specialty_desc: "Custom solutions for unique requirements",
+        industrial_containers: "Metal Boxes (250 g to 20 kg)",
+        industrial_desc: "Sturdy boxes for various capacities, ideal for storage and transport",
+        food_packaging: "Decorative Boxes",
+        food_desc: "Elegant metal packaging for a unique and aesthetic presentation",
+        specialty_containers: "Metal Piggy Banks",
+        specialty_desc: "Durable and customizable coin banks for practical or decorative use",
         industries_title: "Industries We Serve",
         food_beverage: "Food & Beverage",
         chemical: "Chemical",
@@ -73,12 +73,12 @@ const translations = {
         mission_title: "Notre Mission",
         mission_text: "Fournir des solutions d'emballage métallique durables et de haute qualité qui répondent aux besoins de nos clients tout en maintenant les plus hauts standards de responsabilité environnementale.",
         products_title: "Nos Produits",
-        industrial_containers: "Conteneurs Industriels",
-        industrial_desc: "Conteneurs robustes pour applications industrielles",
-        food_packaging: "Emballage Alimentaire",
-        food_desc: "Solutions d'emballage métallique pour aliments",
-        specialty_containers: "Conteneurs Spécialisés",
-        specialty_desc: "Solutions personnalisées pour besoins spécifiques",
+        industrial_containers: "Boîtes Métalliques (250 g à 20 kg)",
+        industrial_desc: "Boîtes robustes de différentes capacités, idéales pour le stockage et le transport",
+        food_packaging: "Boîtes Décoratives",
+        food_desc: "Emballages métalliques élégants pour une présentation unique et esthétique",
+        specialty_containers: "Tirelires Métalliques",
+        specialty_desc: "Tirelires durables et personnalisables pour un usage pratique ou décoratif",
         industries_title: "Industries Servies",
         food_beverage: "Alimentation & Boissons",
         chemical: "Chimique",
@@ -115,12 +115,12 @@ const translations = {
         mission_title: "مهمتنا",
         mission_text: "تقديم حلول تعبئة معدنية مستدامة وعالية الجودة تلبي احتياجات عملائنا مع الحفاظ على أعلى معايير المسؤولية البيئية.",
         products_title: "منتجاتنا",
-        industrial_containers: "حاويات صناعية",
-        industrial_desc: "حاويات متينة للتطبيقات الصناعية",
-        food_packaging: "تعبئة المواد الغذائية",
-        food_desc: "حلول تعبئة معدنية للمواد الغذائية",
-        specialty_containers: "حاويات متخصصة",
-        specialty_desc: "حلول مخصصة للمتطلبات الخاصة",
+        industrial_containers: "صناديق معدنية (250 جم إلى 20 كجم)",
+        industrial_desc: "صناديق متينة بسعات مختلفة، مثالية للتخزين والنقل",
+        food_packaging: "صناديق مزخرفة",
+        food_desc: "عبوات معدنية أنيقة لعرض فريد وجمالي",
+        specialty_containers: "حصالات معدنية",
+        specialty_desc: "حصالات متينة وقابلة للتخصيص للاستخدام العملي أو الديكور",
         industries_title: "الصناعات التي نخدمها",
         food_beverage: "الأغذية والمشروبات",
         chemical: "الكيميائية",
@@ -213,12 +213,19 @@ function updateContent() {
     document.querySelector('#contact h2').textContent = translations[currentLang].contact_title;
     document.querySelector('.contact-info h3').textContent = translations[currentLang].get_in_touch;
     
-    // Update form placeholders using IDs
-    document.getElementById('name-input').placeholder = translations[currentLang].name;
-    document.getElementById('email-input').placeholder = translations[currentLang].email;
-    document.getElementById('phone-input').placeholder = translations[currentLang].phone;
-    document.getElementById('message-input').placeholder = translations[currentLang].message;
-    document.querySelector('.submit-button').textContent = translations[currentLang].send_message;
+    // Update form placeholders
+    const nameInput = document.getElementById('name-input');
+    const emailInput = document.getElementById('email-input');
+    const phoneInput = document.getElementById('phone-input');
+    const messageInput = document.getElementById('message-input');
+    
+    if (nameInput) nameInput.placeholder = translations[currentLang].name;
+    if (emailInput) emailInput.placeholder = translations[currentLang].email;
+    if (phoneInput) phoneInput.placeholder = translations[currentLang].phone;
+    if (messageInput) messageInput.placeholder = translations[currentLang].message;
+    
+    const submitButton = document.querySelector('.submit-button');
+    if (submitButton) submitButton.textContent = translations[currentLang].send_message;
 }
 
 // Mobile Menu
