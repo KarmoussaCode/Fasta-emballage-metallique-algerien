@@ -38,10 +38,9 @@ const translations = {
         specialty_containers: "Metal Piggy Banks",
         specialty_desc: "Durable and customizable coin banks for practical or decorative use",
         industries_title: "Industries We Serve",
-        food_beverage: "Food & Beverage",
-        chemical: "Chemical",
-        cosmetics: "Cosmetics",
-        industrial: "Industrial",
+        paint_industry: "Paint Industry",
+        toy_industry: "Toy Industry",
+        decoration_industry: "Decoration Industry",
         sustainability_title: "Our Commitment to Sustainability",
         recyclable_title: "Recyclable Materials",
         recyclable_text: "100% recyclable metal packaging solutions",
@@ -80,10 +79,9 @@ const translations = {
         specialty_containers: "Tirelires Métalliques",
         specialty_desc: "Tirelires durables et personnalisables pour un usage pratique ou décoratif",
         industries_title: "Industries Servies",
-        food_beverage: "Alimentation & Boissons",
-        chemical: "Chimique",
-        cosmetics: "Cosmétiques",
-        industrial: "Industriel",
+        paint_industry: "Industrie de Peinture",
+        toy_industry: "Industrie du Jouet",
+        decoration_industry: "Industrie de Décoration",
         sustainability_title: "Notre Engagement pour la Durabilité",
         recyclable_title: "Matériaux Recyclables",
         recyclable_text: "Solutions d'emballage métallique 100% recyclables",
@@ -122,10 +120,9 @@ const translations = {
         specialty_containers: "حصالات معدنية",
         specialty_desc: "حصالات متينة وقابلة للتخصيص للاستخدام العملي أو الديكور",
         industries_title: "الصناعات التي نخدمها",
-        food_beverage: "الأغذية والمشروبات",
-        chemical: "الكيميائية",
-        cosmetics: "مستحضرات التجميل",
-        industrial: "الصناعية",
+        paint_industry: "صناعة الدهانات",
+        toy_industry: "صناعة الألعاب",
+        decoration_industry: "صناعة الديكور",
         sustainability_title: "التزامنا بالاستدامة",
         recyclable_title: "مواد قابلة لإعادة التدوير",
         recyclable_text: "حلول تعبئة معدنية قابلة لإعادة التدوير 100%",
@@ -194,10 +191,9 @@ function updateContent() {
     // Industries section
     document.querySelector('#industries h2').textContent = translations[currentLang].industries_title;
     const industryCards = document.querySelectorAll('.industry-card h3');
-    industryCards[0].textContent = translations[currentLang].food_beverage;
-    industryCards[1].textContent = translations[currentLang].chemical;
-    industryCards[2].textContent = translations[currentLang].cosmetics;
-    industryCards[3].textContent = translations[currentLang].industrial;
+    industryCards[0].textContent = translations[currentLang].paint_industry;
+    industryCards[1].textContent = translations[currentLang].toy_industry;
+    industryCards[2].textContent = translations[currentLang].decoration_industry;
 
     // Sustainability section
     document.querySelector('#sustainability h2').textContent = translations[currentLang].sustainability_title;
