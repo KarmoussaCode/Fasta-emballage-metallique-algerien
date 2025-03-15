@@ -485,6 +485,19 @@ h2 {
 .submit-button:hover {
     background: var(--accent-color);
 }
+
+.social-links a i{
+    color: var(--white);
+    font-size: 60px; /* Augmentez la taille des icônes */
+    margin: 0 50px;
+    transition: color 0.3s;
+}
+
+.social-links a i:hover {
+    color: var(--accent-color);
+}
+
+
 /* Map Container */
 .map-container {
     flex: 1;
