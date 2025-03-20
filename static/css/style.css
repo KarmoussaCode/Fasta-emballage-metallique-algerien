@@ -504,7 +504,7 @@ h2 {
 */
 .social-links a i{
     color: var(--white);
-    font-size: 60px; /* Augmentez la taille des icônes */
+    font-size: 55px; /* Augmentez la taille des icônes */
     margin: 0 50px;
     transition: color 0.3s;
 }
