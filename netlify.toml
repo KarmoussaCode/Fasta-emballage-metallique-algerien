@@ -1,0 +1,17 @@
+# Ensure the site always serves index.html for Single Page Applications (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Force Netlify to cache static assets correctly
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect API calls (if needed)
+[[redirects]]
+  from = "/api/*"
+  to = "https://your-backend.com/:splat"
+  status = 200
