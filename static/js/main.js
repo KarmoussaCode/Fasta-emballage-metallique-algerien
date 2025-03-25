@@ -39,6 +39,45 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
+
+// product cards
+const products = [
+    {id: 1, name: "Boîte A", image: "box1.jpg", material: "Fer blanc", capacity: "16 L"},
+    {id: 2, name: "Boîte B", image: "box2.jpg", material: "Aluminium", capacity: "18 L"},
+    {id: 3, name: "Boîte C", image: "box3.jpg", material: "Acier", capacity: "20 L"},
+    {id: 4, name: "Boîte D", image: "box4.jpg", material: "Fer blanc", capacity: "25 L"},
+    {id: 5, name: "Boîte E", image: "box5.jpg", material: "Plastique", capacity: "10 L"}
+];
+
+const container = document.getElementById("productContainer");
+let visibleCount = 3;
+
+function displayProducts() {
+    container.innerHTML = "";
+    for (let i = 0; i < visibleCount && i < products.length; i++) {
+        const product = products[i];
+        container.innerHTML += `
+            <div class="product-card">
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p><strong>Matériau:</strong> ${product.material}</p>
+                <p><strong>Capacité:</strong> ${product.capacity}</p>
+                <button>Demander un devis</button>
+            </div>`;
+    }
+}
+
+document.getElementById("showMore").addEventListener("click", () => {
+    visibleCount += 3;
+    if (visibleCount >= products.length) {
+        document.getElementById("showMore").style.display = "none";
+    }
+    displayProducts();
+});
+
+displayProducts();
+
+
 // Contact Form
 function handleSubmit(event) {
     event.preventDefault();
