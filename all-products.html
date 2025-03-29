@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <style>
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Products</h1>
+    <div id="productContainer"></div>
+
+    <script>
+        const products = [
+            {id: 1, name: "Boîte A", image: "box1.jpg", material: "Fer blanc", capacity: "16 L"},
+            {id: 2, name: "Boîte B", image: "box2.jpg", material: "Aluminium", capacity: "18 L"},
+            {id: 3, name: "Boîte C", image: "box3.jpg", material: "Acier", capacity: "20 L"},
+            {id: 4, name: "Boîte D", image: "box4.jpg", material: "Fer blanc", capacity: "25 L"},
+            {id: 5, name: "Boîte E", image: "box5.jpg", material: "Plastique", capacity: "10 L"},
+            {id: 6, name: "Boîte F", image: "box6.jpg", material: "Aluminium", capacity: "15 L"},
+            {id: 7, name: "Boîte G", image: "box7.jpg", material: "Acier", capacity: "30 L"},
+            {id: 8, name: "Boîte H", image: "box8.jpg", material: "Fer blanc", capacity: "12 L"},
+            {id: 9, name: "Boîte I", image: "box9.jpg", material: "Plastique", capacity: "8 L"},
+            {id: 10, name: "Boîte J", image: "box10.jpg", material: "Aluminium", capacity: "22 L"}
+            ];
+
+        const container = document.getElementById("productContainer");
+
+        function displayAllProducts() {
+            container.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p><strong>Matériau:</strong> ${product.material}</p>
+                    <p><strong>Capacité:</strong> ${product.capacity}</p>
+                    <button>Demander un devis</button>
+                </div>
+            `).join('');
+        }
+
+        displayAllProducts();
+    </script>
+    <script src="static/js/header-footer.js"></script>
+</body>
+</html>
