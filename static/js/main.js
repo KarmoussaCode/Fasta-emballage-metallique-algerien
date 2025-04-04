@@ -39,19 +39,21 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
-// Product list (still needed for the main page)
+
+// product cards
 const products = [
-    {id: 1, name: "Boîte A", image: "static/images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
-    {id: 2, name: "Boîte B", image: "static/images/Metal_Piggy-Banks.png", material: "Aluminium", capacity: "18 L"},
-    {id: 3, name: "Boîte C", image: "static/images/PARFUM.png", material: "Acier", capacity: "20 L"}
+    {id: 1, name: "Boîte A", image: "box1.jpg", material: "Fer blanc", capacity: "16 L"},
+    {id: 2, name: "Boîte B", image: "box2.jpg", material: "Aluminium", capacity: "18 L"},
+    {id: 3, name: "Boîte C", image: "box3.jpg", material: "Acier", capacity: "20 L"},
+    {id: 4, name: "Boîte D", image: "box4.jpg", material: "Fer blanc", capacity: "25 L"},
+    {id: 5, name: "Boîte E", image: "box5.jpg", material: "Plastique", capacity: "10 L"}
 ];
 
 const container = document.getElementById("productContainer");
-const showMoreBtn = document.getElementById("showMore");
-let visibleCount = 3; // Only show 3 products initially
+let visibleCount = 3;
 
 function displayProducts() {
-    container.innerHTML = ""; // Clear previous content
+    container.innerHTML = "";
     for (let i = 0; i < visibleCount && i < products.length; i++) {
         const product = products[i];
         container.innerHTML += `
@@ -65,12 +67,14 @@ function displayProducts() {
     }
 }
 
-// Modify "Show More" button to redirect to all-products.html
-showMoreBtn.addEventListener("click", () => {
-    window.location.href = "all-products.html"; // Open new page with all products
+document.getElementById("showMore").addEventListener("click", () => {
+    visibleCount += 3;
+    if (visibleCount >= products.length) {
+        document.getElementById("showMore").style.display = "none";
+    }
+    displayProducts();
 });
 
-// Show initial products
 displayProducts();
 
 

@@ -22,6 +22,27 @@
     </script>
 </head>
 <body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="static/images/logo.png" alt="FASTA Logo" width="120">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#products">Produits</a>
+                <a href="#industries">Industries</a>
+                <a href="#sustainability">Durabilité</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
     <section id="home" class="hero">
         <div class="container">
             <h1>Innovation en Emballage Métallique</h1>
@@ -137,7 +158,15 @@
             </div>
         </div>
     </section>
-    <script src="static/js/header-footer.js"></script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">FASTA</div>
+                <p>&copy; 2025 FASTA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <script src="/static/js/main.js"></script>        
 </body>
 </html>
