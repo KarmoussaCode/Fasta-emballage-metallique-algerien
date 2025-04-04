@@ -114,33 +114,6 @@ function revealOnScroll() {
         }
     });
 }
-
-
-function sendMail() {
-    var params = {
-        name: document.getElementById("name-input").value,
-        email: document.getElementById("email-input").value,
-        phone: document.getElementById("phone-input").value,
-        message: document.getElementById("message-input").value
-    };
-
-    const serviceID = "service_i0rmo78"
-const templateID = "template_6ru58aq"
-
-emailjs.send(serviceID, templateID, params)
-    .then(
-        res => {
-            document.getElementById("name-input").value = "";
-            document.getElementById("email-input").value = "";
-            document.getElementById("phone-input").value = "";
-            document.getElementById("message-input").value = "";
-            console.log(res);
-            alert("messege sent successfully");
-        }
-    )
-    .catch(err => console.log(err));
-}
-
 // Function to copy phone number to clipboard
 function copyPhoneNumber() {
     const phoneNumber = "+213 661 77 40 79";
