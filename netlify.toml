@@ -16,6 +16,13 @@
   status = 200
   force = true
 
+# Handle assets
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+  force = true
+
 # Handle 404s
 [[redirects]]
   from = "/*"

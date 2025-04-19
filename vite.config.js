@@ -8,11 +8,12 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
       },
     },
-    assetsDir: 'static',
+    assetsDir: 'assets',
+    outDir: 'dist',
   },
   publicDir: 'static',
   server: {
     port: 3000,
   },
-  base: '/',
+  base: './',
 }); 
