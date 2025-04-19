@@ -42,11 +42,11 @@ function toggleMenu() {
 
 // product cards
 const products = [
-    {id: 1, name: "Boîte A", image: "./static/images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
-    {id: 2, name: "Boîte B", image: "./static/images/bidounat.jpg", material: "Aluminium", capacity: "18 L"},
-    {id: 3, name: "Boîte C", image: "./static/images/stack.jpg", material: "Acier", capacity: "20 L"},
-    {id: 4, name: "Boîte D", image: "./static/images/bidounat.jpg", material: "Fer blanc", capacity: "25 L"},
-    {id: 5, name: "Boîte E", image: "./static/images/bonbon.jpg", material: "Plastique", capacity: "10 L"}
+    {id: 1, name: "Boîte A", image: "/images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
+    {id: 2, name: "Boîte B", image: "/images/bidounat.jpg", material: "Aluminium", capacity: "18 L"},
+    {id: 3, name: "Boîte C", image: "/images/stack.jpg", material: "Acier", capacity: "20 L"},
+    {id: 4, name: "Boîte D", image: "/images/bidounat.jpg", material: "Fer blanc", capacity: "25 L"},
+    {id: 5, name: "Boîte E", image: "/images/bonbon.jpg", material: "Plastique", capacity: "10 L"}
 ];
 
 const container = document.getElementById("productContainer");
