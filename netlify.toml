@@ -3,3 +3,10 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Handle static files
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
+  force = true
