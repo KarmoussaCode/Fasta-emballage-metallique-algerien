@@ -1,3 +1,4 @@
+@ -1,31 +1,38 @@
 # Build settings
 [build]
   publish = "dist"
@@ -8,6 +9,20 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Handle images
+[[redirects]]
+  from = "/images/*"
+  to = "/images/:splat"
+  status = 200
+  force = true
+
+# Handle static files
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
+  force = true
 
 # Handle assets
 [[redirects]]
