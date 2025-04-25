@@ -1,7 +1,7 @@
 # Build settings
 [build]
   publish = "dist"
-  command = "NODE_ENV=production npm run build"
+  command = "npm run build"
 
 # Ensure the site always serves index.html for Single Page Applications (SPA)
 [[redirects]]
@@ -9,24 +9,10 @@
   to = "/index.html"
   status = 200
 
-# Handle images
-[[redirects]]
-  from = "/images/*"
-  to = "/images/:splat"
-  status = 200
-  force = true
-
 # Handle static files
 [[redirects]]
   from = "/static/*"
   to = "/static/:splat"
-  status = 200
-  force = true
-
-# Handle assets
-[[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
   status = 200
   force = true
 

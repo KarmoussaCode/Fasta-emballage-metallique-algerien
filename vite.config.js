@@ -8,12 +8,12 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
       },
     },
-    assetsDir: 'images',
+    assetsDir: 'static/images',
     outDir: 'dist',
   },
   publicDir: 'static',
   server: {
     port: 3000,
   },
-  base: process.env.NODE_ENV === 'production' ? '/' : './',
+  base: '/',
 }); 
