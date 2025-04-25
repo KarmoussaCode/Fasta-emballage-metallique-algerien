@@ -8,9 +8,10 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
       },
     },
+    assetsDir: 'images',
     outDir: 'dist',
   },
-  publicDir: 'public',
+  publicDir: 'static',
   server: {
     port: 3000,
   },
