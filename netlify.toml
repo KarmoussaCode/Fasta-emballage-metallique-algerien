@@ -9,10 +9,10 @@
   to = "/index.html"
   status = 200
 
-# Handle static files
+# Handle assets
 [[redirects]]
-  from = "/static/*"
-  to = "/static/:splat"
+  from = "/assets/*"
+  to = "/assets/:splat"
   status = 200
   force = true
 

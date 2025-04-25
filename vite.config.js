@@ -8,7 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
       },
     },
-    assetsDir: 'static/images',
+    assetsDir: 'assets',
     outDir: 'dist',
   },
   publicDir: 'static',
