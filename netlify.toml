@@ -1,7 +1,7 @@
 # Build settings
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "NODE_ENV=production npm run build"
 
 # Ensure the site always serves index.html for Single Page Applications (SPA)
 [[redirects]]
