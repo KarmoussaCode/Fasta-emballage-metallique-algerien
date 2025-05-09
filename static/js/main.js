@@ -39,6 +39,16 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
+/////////////////////to fix the mobile menu button/////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+  
+    button.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+  
 
 // product cards
 const products = [
