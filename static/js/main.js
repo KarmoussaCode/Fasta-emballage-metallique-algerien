@@ -1,5 +1,5 @@
 // Navigation
-const navbar = document.getElementById('navbar');
+const navbar = document.getElementById('header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
@@ -28,17 +28,18 @@ function checkMissionImage() {
 window.addEventListener('scroll', checkMissionImage);
 window.addEventListener('load', checkMissionImage);
 
-// Mobile Menu
-// function toggleMenu() {
-//     const navLinks = document.querySelector('.nav-links');
-//     navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-// }
-// Mobile Menu
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
 
+
+/////////////////////to call the mobile menu button/////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-menu');
+  
+    button.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+  
 
 // product cards
 const products = [
@@ -78,17 +79,37 @@ document.getElementById("showMore").addEventListener("click", () => {
 displayProducts();
 
 
-// Contact Form
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    console.log('Form submitted:', data);
-    alert('Merci pour votre message. Nous vous contacterons bientôt !');
-    event.target.reset();
-}
+document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("VU8nbJFfMchRUJ_Ab"); // ما تحتاجش import، متوفر مباشرة
+  
+    const form = document.getElementById("contact-form");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const params = {
+        name: document.getElementById("name-input").value,
+        email: document.getElementById("email-input").value,
+        phone: document.getElementById("phone-input").value,
+        message: document.getElementById("message-input").value,
+      };
+  
+      const serviceID = "service_i0rmo78";
+      const templateID = "template_6ru58aq";
+  
+      emailjs.send(serviceID, templateID, params)
+        .then((res) => {
+          form.reset();
+          alert("Message envoyé avec succès !");
+          console.log("SUCCESS", res);
+        })
+        .catch((err) => {
+          console.error("FAILED...", err);
+          alert("Une erreur s'est produite. Veuillez réessayer.");
+        });
+    });
+  });
+  
 
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

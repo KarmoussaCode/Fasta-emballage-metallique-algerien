@@ -1,0 +1,128 @@
+/* I move all Herder Css from style.css to this file */
+
+/* Navigation */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+#header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-menu ul li  {
+  display: inline-block;
+}
+.nav-menu ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 80px;
+  padding: 0 14px;
+}
+
+
+.nav-menu ul li a:hover {
+  color: var(--accent-color);
+}
+/* mobile menu */
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.active, .nav-menu.active li {
+  display: block;
+}
+
+.logo-img {
+  width: 149px;
+  height: 54px;
+}
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+/* Additional styles for mobile responsiveness */
+@media (min-width: 768px) {
+  .nav-menu  {
+      display: flex;
+  }
+  .nav-menu ul  {
+    display: flex;
+  }
+    .main {
+    padding-top: 50px;
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      padding: 15px 0px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-menu ul li a {
+      display: block;
+      padding: 0px 0;
+      line-height: 60px;
+  }
+
+  #header .container {
+  padding: 8px 15px;
+  }
+
+  .contact-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+      font-size: 36px;
+  }
+
+  .about-content {
+      grid-template-columns: 1fr;
+  }
+    .mobile-menu {
+      display: block;
+  }
+  
+  .mobile-menu span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--text-color);
+      margin: 5px 0;
+  }
+    .contact-content {
+      grid-template-columns: 1fr;
+  }
+
+  .contact-info, .contact-form, .map-container {
+      max-width: 100%;
+  }
+}
