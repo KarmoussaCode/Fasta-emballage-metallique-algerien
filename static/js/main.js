@@ -33,7 +33,9 @@ window.addEventListener('load', checkMissionImage);
 /////////////////////to call the mobile menu button/////////////////////
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector('.mobile-menu');
+
     const navLinks = document.querySelector('.nav-menu');
+
   
     button.addEventListener("click", () => {
       navLinks.classList.toggle("active");
