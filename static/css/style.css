@@ -25,19 +25,6 @@ body {
     padding: 0 20px;
 } */
 
-/* Navigation */
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
-
-
-/* #############end#################### */
 /* inderline animation */
 .container {
     max-width: 1200px;
@@ -78,39 +65,8 @@ body {
 }
 /* ##############end########################### */
 
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 20px 15px;
-    display: inline-block;
-    transition: color 0.3s;
-}
 
-.nav-links a:hover {
-    color: var(--accent-color);
-}
-/* mobile menu */
 
-.nav-links {
-    display: none;
-}
-
-.nav-links.active {
-    display: block;
-}
-
-/* Additional styles for mobile responsiveness */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-    }
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
 
 /* Hero Section */
 .hero {
@@ -258,7 +214,7 @@ h2 {
 #showMore:hover {
     background-color: #1e7e34;
 }
-/* .product-grid {
+ .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -290,7 +246,7 @@ h2 {
 .product-card p {
     padding: 0 20px 20px;
     color: var(--secondary-color);
-} */
+} 
 
 /* Industries */
 .industry-grid {
@@ -614,68 +570,32 @@ h2 {
 footer {
     background: var(--primary-color);
     color: var(--white);
-    padding: 40px 0;
     text-align: center;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .nav-links a {
-        display: block;
-        padding: 10px 0;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
+footer .container {
+    border-top: 1px solid #0f1c28b8;
+    padding: 15px;
 }
 
-/* Mobile Menu */
-.mobile-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-    .mobile-menu {
-        display: block;
-    }
-    
-    .mobile-menu span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: var(--text-color);
-        margin: 5px 0;
-    }
+.footer-content span a {
+    font-weight: bold;
+    color: #a9d7a4;
+    text-decoration: none;
 }
-@media (max-width: 768px) {
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
 
-    .contact-info, .contact-form, .map-container {
-        max-width: 100%;
-    }
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
 }
