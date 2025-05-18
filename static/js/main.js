@@ -1,7 +1,8 @@
 // Navigation
 const navbar = document.getElementById('header');
 let lastScroll = 0;
-
+const topThreshold = 10;
+/*
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
@@ -13,7 +14,17 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+*/
+window.addEventListener("scroll", () =>{
+ if(window.scrollY > topThreshold) {
+  navbar.classList.add("collapse");
+  document.getElementById("imageelement").src = "/public/images/logo.png";
 
+ } else {
+  navbar.classList.remove("collapse");
+  document.getElementById("imageelement").src = "/public/images/logo-white.png";
+ }
+});
 // Mission Image Animation
 function checkMissionImage() {
     const aboutImage = document.querySelector('.about-image');
@@ -43,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
-// product cards
+// product cards// 
+/*
 const products = [
     {id: 1, name: "Boîte A", image: "/public/images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
     {id: 2, name: "Boîte B", image: "/public/images/bidounat.jpg", material: "Aluminium", capacity: "18 L"},
@@ -79,7 +91,7 @@ document.getElementById("showMore").addEventListener("click", () => {
 });
 
 displayProducts();
-
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
     emailjs.init("VU8nbJFfMchRUJ_Ab"); // ما تحتاجش import، متوفر مباشرة

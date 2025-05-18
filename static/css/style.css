@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #95A5A6;
@@ -14,7 +15,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
@@ -599,3 +600,35 @@ img.emoji {
     background: none !important;
     padding: 0 !important;
 }
+.hover-word {
+            position: relative;
+
+            cursor: pointer;
+        }
+
+        .cactus {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: -20px;
+            pointer-events: none;
+            font-size: 2rem;
+            animation: floating 3s ease-in-out infinite;
+            transform: translateX(50%);
+        }
+
+        .hover-word:hover .cactus {
+            display: inline;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateX(0) translateY(0) rotate(-10deg);
+            }
+            50% {
+                transform: translateX(0) translateY(-10px) rotate(10deg);
+            }
+            100% {
+                transform: translateX(0) translateY(0) rotate(-10deg);
+            }
+        }

@@ -5,8 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--white);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #ffffff00;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
 }
@@ -18,7 +17,7 @@
   display: inline-block;
 }
 .nav-menu ul li a {
-  color: var(--text-color);
+  color: var(--white);
   text-decoration: none;
   transition: color 0.3s;
   font-size: 16px;
@@ -30,6 +29,19 @@
 
 .nav-menu ul li a:hover {
   color: var(--accent-color);
+}
+#header.collapse {
+    background: var(--white);
+    border: solid 1px #95a5a3;
+}
+
+#header.collapse .nav-menu ul li a {
+    color: var(--text-color);
+    line-height: 60px;
+}
+
+#header.collapse .nav-menu ul li a:hover {
+    color: var(--accent-color);
 }
 /* mobile menu */
 
@@ -65,9 +77,6 @@
   }
   .nav-menu ul  {
     display: flex;
-  }
-    .main {
-    padding-top: 50px;
   }
 }
 
