@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // product cards
 const products = [
-    {id: 1, name: "Boîte A", image: "/public/images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
-    {id: 2, name: "Boîte B", image: "/public/images/bidounat.jpg", material: "Aluminium", capacity: "18 L"},
-    {id: 3, name: "Boîte C", image: "/public/images/stack.jpg", material: "Acier", capacity: "20 L"},
-    {id: 4, name: "Boîte D", image: "/public/images/bidounat.jpg", material: "Fer blanc", capacity: "25 L"},
-    {id: 5, name: "Boîte E", image: "/public/images/bonbon.jpg", material: "Plastique", capacity: "10 L"}
+    {id: 1, name: "Boîte A", image: "static/product-images/oustowana_boxes.png", material: "Fer blanc", capacity: "16 L"},
+    {id: 2, name: "Boîte B", image: "static/product-images/bidounat.jpg", material: "Aluminium", capacity: "18 L"},
+    {id: 3, name: "Boîte C", image: "static/product-images/stack.jpg", material: "Acier", capacity: "20 L"},
+    {id: 4, name: "Boîte D", image: "static/product-images/bidounat.jpg", material: "Fer blanc", capacity: "25 L"},
+    {id: 5, name: "Boîte E", image: "static/product-images/bonbon.jpg", material: "Plastique", capacity: "10 L"}
 ];
 
 const container = document.getElementById("productContainer");
