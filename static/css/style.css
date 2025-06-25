@@ -186,7 +186,7 @@ h2 {
 }
 
 .product-card button {
-    background-color: #007bff;
+    background-color: #5b6570;
     color: white;
     padding: 10px;
     border: none;
@@ -197,7 +197,7 @@ h2 {
 }
 
 .product-card button:hover {
-    background-color: #0056b3;
+    background-color: var(--accent-color);
 }
 
 #showMore {
@@ -214,10 +214,17 @@ h2 {
 #showMore:hover {
     background-color: #1e7e34;
 }
- .product-grid {
+
+#products h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    place-items: center; /* Centers content horizontally and vertically */
 }
 
 .product-card {
@@ -247,6 +254,21 @@ h2 {
     padding: 0 20px 20px;
     color: var(--secondary-color);
 } 
+/* show more btn */
+.show-more-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #39ab4e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .show-more-btn:hover {
+    background-color: var(--accent-color);;
+  }
+  
 
 /* Industries */
 .industry-grid {
@@ -349,24 +371,7 @@ h2 {
     color: var(--white);
 }
 
-/* .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
 
-.contact-info {
-    flex: 1;
-    max-width: 400px;
-    text-align: left;
-}
-
-.contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-} */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -479,42 +484,7 @@ h2 {
 .submit-button:hover {
     background-color: var(--accent-color);
 }
-/*
-.contact-content {
-    display: grid;
-    max-width: 200%;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-}
- 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
-   
-}
 
-.contact-form textarea {
-    height: 150px;
-}
-
-.submit-button {
-    background: var(--secondary-color);
-    color: var(--white);
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.submit-button:hover {
-    background: var(--accent-color);
-}
-*/
 .social-links a i{
     color: var(--white);
     font-size: 60px; /* Augmentez la taille des icônes */
@@ -527,19 +497,6 @@ h2 {
 }
 
 
-/* 
-.map-container {
-    flex: 1;
-    max-width: 50%;
-    text-align: left;
-    display: none;} /* Hide by default */
-
-
-/* .map-container h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-}  */ 
 
 .map-container iframe { /* iframe = integre une page web dans ma page */
     width: 100%;

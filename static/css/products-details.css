@@ -1,0 +1,138 @@
+.product-details {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .product-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+  
+  .product-detail-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  .product-img {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex: 1;
+  }
+  
+  .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .product-info h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .product-info div {
+    font-size: 1rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  
+  .quote-button {
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background-color: #2a8b8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+  }
+  
+  .quote-button:hover {
+    background-color: #1d5c5c;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .product-detail-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .product-info {
+      align-items: center;
+    }
+  
+    .quote-button {
+      align-self: center;
+    }
+  }
+  
+
+  /* تحديد عرض الصور بحيث تكون متساوية */
+.image-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  
+}
+
+
+.image-option {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-option img {
+  width: 200px; /* يمكنك تعديل الحجم حسب الرغبة */
+  height: auto;
+  border-radius: 30%;
+}
+
+.image-option:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+section {
+  padding: 30px 0;
+}
+.image-option p {
+  margin-top: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="70x70" href="/public/images/tiny_logo.png">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- <script src="index.js"></script> -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -74,11 +75,13 @@
               <div class="product-grid">
                 
                 <div class="product-card">
-                  <img src="static/product-images/oustowana_boxes.png" alt="Boîte A">
-                  <h3>Boîte A</h3>
-                  <p><strong>Matériau:</strong> Fer blanc</p>
-                  <p><strong>Capacité:</strong> 16 L</p>
-                  <button>Demander un devis</button>
+                    <a href="product-details.html" style="text-decoration: none; color: inherit;">
+                        <img src="static/product-images/rectogpt.png" alt="Bac rectangulaire pails 255 x 165">
+                        <h3>Bac rectangulaire pails 255 x 165</h3>
+                        <p><strong>Matériau:</strong> Fer blanc</p>
+                        <p><strong>Capacité:</strong> 16 L</p>
+                        <button>Détails & Devis</button>
+                    </a>
                 </div>
           
                 <div class="product-card">
@@ -86,17 +89,18 @@
                   <h3>Boîte B</h3>
                   <p><strong>Matériau:</strong> Aluminium</p>
                   <p><strong>Capacité:</strong> 18 L</p>
-                  <button>Demander un devis</button>
+                  <button>Détails & Devis</button>
                 </div>
           
                 <div class="product-card">
-                  <img src="static/product-images/stack.jpg" alt="Boîte C">
+                  <img src="static/product-images/stack.jpg" alt="Boîte C" width="100">
                   <h3>Boîte C</h3>
                   <p><strong>Matériau:</strong> Acier</p>
                   <p><strong>Capacité:</strong> 20 L</p>
-                  <button>Demander un devis</button>
+                  <button>Détails & Devis</button>
                 </div>          
               </div>
+              <a href="products.html" class="show-more-btn">Voir plus</a>
             </div>
           </section>
           
@@ -177,7 +181,20 @@
                     <input type="tel" id="phone-input" name="phone" placeholder="Phone">
                     <textarea id="message-input" name="message" placeholder="Message" required></textarea>
                     <button type="submit" class="submit-button">Envoyer le Message</button>
-                </form>                  
+                </form>    
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const messageInput = document.getElementById("message-input");
+                      const savedMessage = localStorage.getItem("demandeProduit");
+                  
+                      if (savedMessage && messageInput) {
+                        messageInput.value = savedMessage;
+                        localStorage.removeItem("demandeProduit");
+                        messageInput.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    });
+                  </script>
+                                
                 <div class="map-container">
                     <h3>Localisation</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.5811176412744!2d6.672763609152007!3d36.30308488144728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDE4JzExLjgiTiA2wrA0MCczMy40IkU!5e1!3m2!1sfr!2sdz!4v1742038359165!5m2!1sfr!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

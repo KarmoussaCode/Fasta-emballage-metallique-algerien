@@ -70,21 +70,29 @@ function displayProducts() {
     }
 }
 
-document.getElementById("showMore").addEventListener("click", () => {
+const showMoreButton = document.getElementById("showMore");
+
+if (showMoreButton) {
+  showMoreButton.addEventListener("click", () => {
     visibleCount += 3;
     if (visibleCount >= products.length) {
-        document.getElementById("showMore").style.display = "none";
+      showMoreButton.style.display = "none";
     }
     displayProducts();
-});
+  });
+}
 
-displayProducts();
+
+// Contact Form with EmailJS
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    emailjs.init("VU8nbJFfMchRUJ_Ab"); // ما تحتاجش import، متوفر مباشرة
+    emailjs.init("VU8nbJFfMchRUJ_Ab");
   
     const form = document.getElementById("contact-form");
+  
+    // ✅ تأكد أن الفورم موجود قبل نكمل
+    if (!form) return;
   
     form.addEventListener("submit", function (event) {
       event.preventDefault();
