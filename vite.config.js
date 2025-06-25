@@ -1,33 +1,33 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'products.html',
-          dest: ''
-        },
-        {
-          src: 'product-details.html',
-          dest: ''
-        }
-      ]
-    })
-  ],
+  base: './', // Utilise des chemins relatifs pour le déploiement
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-      },
-    },
-    outDir: 'dist',
+        products: resolve(__dirname, 'products.html'),
+        details: resolve(__dirname, 'product-details.html'),
+      }
+    }
   },
-  publicDir: 'public',
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        { 
+          src: 'public/static/**/*', 
+          dest: 'static' 
+        }
+      ]
+    })
+  ],
+  // Configuration pour le serveur de développement
   server: {
-    port: 3000,
-  },
-  base: '/',
+    fs: {
+      allow: ['..']
+    }
+  }
 });
+
