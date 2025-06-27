@@ -24,15 +24,3 @@ window.choisirHauteur = function(hauteur) {
     // Logique pour changer la hauteur du produit
 }
 
-// Ce bloc s'exécutera dans index.html UNIQUEMENT !
-document.addEventListener("DOMContentLoaded", function () {
-    const messageInput = document.getElementById("message-input");
-    const savedMessage = localStorage.getItem("demandeProduit");
-
-    if (savedMessage && messageInput) {
-        messageInput.value = savedMessage;
-        localStorage.removeItem("demandeProduit");
-        messageInput.scrollIntoView({ behavior: 'smooth' });
-    }
-});
-
