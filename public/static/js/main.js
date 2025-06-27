@@ -145,7 +145,6 @@ function revealOnScroll() {
         }
     });
 }
-
 // Function to copy phone number to clipboard
 function copyPhoneNumber() {
     const phoneNumber = "+213 661 77 40 79";
@@ -161,27 +160,3 @@ window.addEventListener('scroll', revealOnScroll);
 document.addEventListener('DOMContentLoaded', () => {
     checkMissionImage();
 });
-
-// Fonction globale qu'on appelle depuis le HTML
-function demanderDevis(nomProduit, materiau, capacite, conditionnement) {
-    const message = `🔹 Bonjour, je suis intéressé par le produit ${nomProduit}.\nMatière: ${materiau}\nCapacité: ${capacite}\nConditionnement: ${conditionnement}\nPourriez-vous m’envoyer un devis avec les prix et conditions ?\nMerci.`;
-  
-    localStorage.setItem("demandeProduit", message);
-  }
-  
-  
-  // Ce bloc s'exécutera uniquement sur index.html
-document.addEventListener("DOMContentLoaded", function () {
-    // Attendre que le script soit entièrement chargé
-    window.addEventListener("load", function () {
-      const messageInput = document.getElementById("message-input");
-      const savedMessage = localStorage.getItem("demandeProduit");
-  
-      if (savedMessage && messageInput) {
-        messageInput.value = savedMessage;
-        localStorage.removeItem("demandeProduit");
-        messageInput.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-  
