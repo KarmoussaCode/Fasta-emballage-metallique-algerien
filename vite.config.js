@@ -3,15 +3,17 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: './', // Utilise des chemins relatifs pour le déploiement
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         products: resolve(__dirname, 'products.html'),
-        details: resolve(__dirname, 'product-details.html'),
-      }
-    }
+        productDetails: resolve(__dirname, 'product-details.html'),
+        bidonRectangulaireDetails: resolve(__dirname, 'Bidon-rectangulaire-details.html'),
+        bidonConique: resolve(__dirname, 'Bidon-conique.html'), // Ajoutez cette ligne
+        // Ajoutez d'autres pages de détails ici si vous en avez
+      },
+    },
   },
   plugins: [
     viteStaticCopy({
