@@ -1,7 +1,7 @@
 [build]
   publish = "dist"
   command = "npm run build"
-
+ 
 # Redirections pour les pages HTML statiques
 [[redirects]]
   from = "/products"
