@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FASTA - Solutions d'emballage métallique leader en Algérie. Fournissant des emballages métalliques innovants et durables pour diverses industries.">
+    <title>FASTA - Solutions d'Emballage Métallique</title>
+    <link rel="icon" type="image/png" sizes="70x70" href="./static/images/tiny_logo.png">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <script src="index.js"></script> -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "VU8nbJFfMchRUJ_Ab",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html"><img src="./static/images/logo.png" alt="FASTA Logo" class="logo-img"></a>
+            </div>
+            <nav class="nav-menu">
+                <ul class="menu">
+                    <li><a href="./index.html#home" class="active">Accueil</a></li>
+                    <li><a href="./index.html#about">À Propos</a></li>
+                    <li><a href="./index.html#products">Produits</a></li>
+                    <li><a href="./index.html#industries">Industries</a></li>
+                    <li><a href="./index.html#sustainability">Durabilité</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="main">
+
+        <section id="products" class="products">
+            <div class="container">
+                <h1>Nos Produits</h1>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <a href="./product-details.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/rectogpt.png" alt="Bac rectangulaire pails 255 x 165">
+                            <h3>Bac rectangulaire pails 255 x 165</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Capacité:</strong> 16 L</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>
+            
+                    <div class="product-card">
+                        <a href="./Bidon-rectangulaire-details.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/Bidon-rectangulaire.png" alt="Bidon-rectangulaire">
+                            <h3>Bidon rectangulaire</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Capacité:</strong> 3L</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>         
+
+                    <div class="product-card">
+                        <a href="./Bidon-conique.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/conique.png" alt="Bidon conique 1 jonc ø 292">
+                            <h3>Bidon rectangulaire</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Capacité:</strong> 20 L</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="./boite-cylendrique.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/sbigha.png" alt="Boite Cylendrique">
+                            <h3>Bidon rectangulaire</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Hauteur:</strong> 180 mm</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="./duliant.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/duliant.png" alt="Duliant 1L">
+                            <h3> Duliant 5L</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Capacité:</strong> 5L</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="./canette.html" style="text-decoration: none; color: inherit;">
+                            <img src="./static/product-images/canette.png" alt="Duliant 1L">
+                            <h3> Canette 1L</h3>
+                            <p><strong>Matériau:</strong> Fer blanc</p>
+                            <p><strong>Capacité:</strong> 1L</p>
+                            <button>Détails & Devis</button>
+                        </a>
+                    </div>
+        </section>
+          
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Prenez Contact</h3>
+                        <div class="contact-item">
+                            <p class="label"><i class="fas fa-phone-alt"></i> Télephone</p>
+                            <p class="value" onclick="copyPhoneNumber()" style="cursor: pointer;">+213 661 77 40 79</p>
+                        </div>
+                        <hr>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1BjUup5ZY6/" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://wa.me/213661774079" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <hr>
+                        <div class="contact-item">
+                            <p class="label"><i class="fas fa-envelope"></i> E-mail</p>
+                            <p class="value"><a href="mailto:Fastaemballage@yahoo.com">Fastaemballage@yahoo.com</a></p>
+                        </div>
+                        <hr>
+                        <div class="contact-item">
+                            <p class="label"><i class="fas fa-map-marker-alt"></i> Adresse</p>
+                            <p class="value"><a href="https://maps.app.goo.gl/xNGq4S4bEQfPaLpr9" target="_blank">Oed Hamimime, El kheroub, Constantine, ALGÉRIE</a></p>
+                        </div>
+                    </div>
+
+                <form id="contact-form" class="contact-form">
+                    <input type="text" id="name-input" name="name" placeholder="Name" required>
+                    <input type="email" id="email-input" name="email" placeholder="Email" required>
+                    <input type="tel" id="phone-input" name="phone" placeholder="Phone">
+                    <textarea id="message-input" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-button">Envoyer le Message</button>
+                </form>                  
+                <div class="map-container">
+                    <h3>Localisation</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3637.5811176412744!2d6.672763609152007!3d36.30308488144728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDE4JzExLjgiTiA2wrA0MCczMy40IkU!5e1!3m2!1sfr!2sdz!4v1742038359165!5m2!1sfr!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 FASTA. All rights reserved.</p>
+                <p>Made with <img class="emoji" alt="❤" src="https://s.w.org/images/core/emoji/15.1.0/svg/2764.svg">
+                by <span><a href="https://www.instagram.com/karmoussa_code" target="_blank">Karmoussa</a></span></p>
+                
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirections pour les pages HTML statiques
+[[redirects]]
+  from = "/products"
+  to = "/products.html"
+  status = 200
+
+[[redirects]]
+  from = "/product-details"
+  to = "/product-details.html"
+  status = 200
+
+# Gestion des erreurs 404 - rediriger vers la page d'accueil
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Headers pour les assets statiques
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Headers pour les fichiers HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+

@@ -1,0 +1,7 @@
+# Redirections pour les pages HTML statiques
+/products /products.html 200
+/product-details /product-details.html 200
+
+# Fallback pour les erreurs 404
+/* /index.html 404
+

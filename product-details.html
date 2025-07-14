@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du produit - FASTA">
+    <title>Détails du Produit</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/products-details.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="./products.html"><img src="./static/images/logo.png" alt="FASTA Logo" class="logo-img"></a>
+            </div>
+            <nav class="nav-menu">
+                <ul class="menu">
+                    <li><a href="./index.html#home">Accueil</a></li>
+                    <li><a href="./index.html#products">Produits</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Force rebuild -->
+    <div class="main">
+        <section id="product-details" class="product-details">
+            <div class="container">
+              <h2 class="product-title">Bac rectangulaire pails 255 x 165</h2>
+              <div class="product-detail-card">
+                <img src="./static/product-images/rectogpt.png" alt="Produit Rectogpt" class="product-img">
+                <div class="product-info">
+                    <h1>Détails du Produit</h1>
+                    <div><strong>Matériau:</strong> Fer blanc</div>
+                    <div><strong>Format:</strong> 255 x 165 x 230 mm</div>
+                    <div><strong>Type:</strong> Soudé</div>
+                    <div><strong>Finition intérieur:</strong> Vernis ou nu</div>
+                    <div><strong>Finition extérieur:</strong> Couché blanc ou nu + impression offset</div>
+                    <div><strong>Poignée:</strong> 1 poignée métallique</div>
+                    <div><strong>Emboitable et gerbable:</strong> Oui</div>
+                    <div><strong>Capacité commerciale:</strong> 6 L</div>
+                    <div><strong>Capacité ISO:</strong> 8 L</div>
+                    <div><strong>Conditionnement:</strong> 378 pcs sur palette 800 x 1200</div>
+                    <a 
+                        href="./index.html#contact-form"
+                        class="quote-button"
+                        id="demander-devis-link"
+                        data-product-name="Bac rectangulaire pails 255 x 165"
+                        data-product-material="Fer blanc"
+                        data-product-capacity="6 L"
+                        data-product-packaging="378 pcs sur palette 800 x 1200"
+                        >
+                        Demander un devis
+                    </a>
+                </div>
+              </div>
+            </div>
+        </section> 
+            <hr>
+        <section id="height-options" class="height-options">
+            <div class="container">
+                <!-- Titre pour la section suivante -->
+                <h3>Choisir une autre hauteur</h3>
+
+                <!-- 3 images cliquables -->
+                <div class="image-options">
+                    <div class="image-option" onclick="choisirHauteur(1)">
+                        <img src="./static/product-images/rectogpt.png" alt="Hauteur 1">
+                        <p>Hauteur 1 - 200 mm</p>
+                    </div>
+                    <div class="image-option" onclick="choisirHauteur(2)">
+                        <img src="./static/product-images/recomoy.png" alt="Hauteur 2">
+                        <p>Hauteur 2 - 250 mm</p>
+                    </div>
+                    <div class="image-option" onclick="choisirHauteur(3)">
+                        <img src="./static/product-images/rectomini.png" alt="Hauteur 3">
+                        <p>Hauteur 3 - 300 mm</p>
+                    </div>
+                </div>
+            </div>         
+        </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 FASTA. All rights reserved.</p>
+                <p>Made with <img class="emoji" alt="❤" src="https://s.w.org/images/core/emoji/15.1.0/svg/2764.svg">
+                by <span><a href="https://www.instagram.com/karmoussa_code" target="_blank">Karmoussa</a></span></p>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
