@@ -74,4 +74,3 @@ Le fichier `netlify.toml` contient la configuration pour :
 
 ## Support
 Pour toute question ou problème, contactez l'équipe de développement.
-
